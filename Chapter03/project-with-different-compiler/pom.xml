@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.packt.cookbook</groupId>
+  <artifactId>project-with-different-compiler</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Project with different compiler</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <properties>
+      <JAVA8.HOME>C:/Program Files/Java/jdk1.8.0_20</JAVA8.HOME>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <verbose>true</verbose>
+          <fork>true</fork>
+          <executable>${JAVA8.HOME}/bin/javac</executable>
+          <compilerVersion>1.8</compilerVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

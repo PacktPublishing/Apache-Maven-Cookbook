@@ -1,0 +1,10 @@
+<project name="project-with-ant" default="echo" basedir=".">
+    <description>
+        Simple ant task to echo a string
+    </description>
+
+    <target name="echo">
+        <echo message="Hello World"/>
+   </target>
+</project>
+
